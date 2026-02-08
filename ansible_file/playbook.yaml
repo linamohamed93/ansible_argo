@@ -3,7 +3,7 @@
   hosts: localhost
   
   roles:
-    - helm_role
+    # - helm_role
 
     - ArgoCd_role
   

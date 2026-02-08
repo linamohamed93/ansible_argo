@@ -38,14 +38,14 @@
           Password: {{ argocd_password.stdout }}
   
 
- - name: Copy secrets.yaml to temporary location
-   copy:
-    src: "{{ role_path }}/files/secrets.yaml"
-    dest: "/tmp/secrets.yaml"
-    mode: '0644'
+#  - name: Copy secrets.yaml to temporary location
+#    copy:
+#     src: "{{ role_path }}/files/secrets.yaml"
+#     dest: "/tmp/secrets.yaml"
+#     mode: '0644'
 
- - name: Apply Git repo to ArgoCD
-   command: kubectl --kubeconfig {{ kubeconfig_path }} apply -f /tmp/secrets.yaml
+#  - name: Apply Git repo to ArgoCD
+#    command: kubectl --kubeconfig {{ kubeconfig_path }} apply -f /tmp/secrets.yaml
 
  - name: Copy Application.yaml to temporary location
    copy:
